@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Oswald&family=Ubuntu&display=swap');
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background: #ff6e7f;
+    background: -webkit-linear-gradient(to right, #d0eeff, #bfe9ff);
+    background: linear-gradient(to right, #cfeeff, #bfe9ff);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content{
+    width: 90%;
+    display: grid;
+    grid-template-rows: repeat(2, 225px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin-bottom: 8px;
+}
+h1{
+    font-size: 0.9em;
+    font-family: 'Agbalumo', sans-serif;
+}
+h2{
+    font-size: 1.1em;
+    font-family: 'Oswald', sans-serif;
+}
+p{
+    font-size: 0.7em;
+}
+.intro{
+    display: flex;
+}
+.intro img{
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    padding: 5px 15px;
+    background-color: white;
+    box-shadow:  5px 5px 8px #bebebe,
+             -5px -5px 8px #ffffff;
+}
+
+.box-1 p, .box-2 p, .box-5 p{
+    color: #b4b4b4;
+}
+.box-1{
+    grid-column: 1/3;
+    background-color: rgb(89, 0, 255);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-position: 80% 20px;
+    color: white;
+    background-repeat: no-repeat;
+}
+.box-2{
+    background-color: rgb(73, 73, 73);
+    color: white;
+}
+.box-3{
+    grid-row: 1/-1;
+    grid-column: 4/-1;
+}
+.box-5{
+    grid-column: 2/4;
+    background-color: rgb(0, 19, 54);
+    color: white;
+}
+
+.attribution { font-size: 11px; text-align: center; margin-bottom: 30px; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width:375px){
+    .container{
+        height: auto;
+        display: inline;
+    }
+    .content{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: 30px auto;
+    }
+}
